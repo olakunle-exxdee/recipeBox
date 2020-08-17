@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+img :not(.img) {
+  width: 100%;
+  display: block;
+}
+.container1 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+@mixin media {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}

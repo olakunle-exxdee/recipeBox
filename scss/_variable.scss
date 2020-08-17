@@ -1,0 +1,7 @@
+$primary-color: #fa7000;
+$white: #fff;
+$black: #000;
+
+@mixin trans {
+  transition: all 500ms ease;
+}

@@ -1,0 +1,212 @@
+header {
+  background-color: $primary-color;
+  padding: 1rem 0;
+}
+.navbar {
+  // navbar one
+  &__one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+    @include trans;
+    transition: 500ms;
+
+    &.open {
+      transform: translateX(-95%);
+      @include trans;
+      margin-right: 0;
+    }
+    .menu {
+      cursor: pointer;
+      height: 10px;
+      width: 30px;
+      @include trans;
+      &__bar {
+        position: absolute;
+        display: block;
+        background: whitesmoke;
+        height: 1px;
+        width: 20px;
+        @include trans;
+        &:hover {
+          width: 30px;
+          transition: all 50ms ease-out;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          background: whitesmoke;
+          height: 1px;
+          width: 28px;
+          top: -10px;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: whitesmoke;
+          height: 1px;
+          width: 28px;
+          bottom: -10px;
+        }
+        &.open {
+          @include trans;
+          background: transparent;
+
+          &::before {
+            transform: rotate(45deg) translate(8px, 8px);
+            transition-delay: 200ms;
+          }
+          &::after {
+            transform: rotate(-45deg) translate(7px, -7px);
+            transition-delay: 200ms;
+          }
+        }
+      }
+    }
+  }
+  // navbar one ends
+
+  &__two {
+    display: none;
+    @include trans;
+    z-index: 1000;
+    &.open {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: linear-gradient(to bottom, #c75e07, rgba(0, 0, 0, 0));
+      min-height: 100vh;
+      width: 100%;
+      display: block;
+      min-width: 80%;
+      min-height: 100vh;
+      transform: translateX(10%);
+      @include trans;
+    }
+
+    .dropdown {
+      margin: 4rem 0 0 0;
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+      }
+      .title {
+        a {
+          text-transform: uppercase;
+        }
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        display: inline-block;
+        color: whitesmoke;
+        font-weight: bolder;
+        cursor: pointer;
+        padding: 1em 6em 1em 2em;
+        margin-left: 2em;
+        border-radius: 5px;
+
+        @include trans;
+        &:hover {
+          background: rgba(0, 0, 0, 0.2);
+          @include trans;
+        }
+        .fa {
+          @include trans;
+          margin-left: 0.5rem;
+          &.open {
+            transform: rotate(90deg);
+            @include trans;
+          }
+        }
+      }
+      &__menu {
+        @include trans;
+        display: none;
+        &.open {
+          display: block;
+          transition: all 200ms ease-out;
+          @include trans;
+        }
+        .option {
+          text-transform: capitalize;
+          display: inline-block;
+          background: none;
+          border: none;
+          padding: 0.5rem 5rem 0.5rem 1rem;
+          color: whitesmoke;
+          font-weight: 300;
+          cursor: pointer;
+          width: 100%;
+          @include trans;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.2);
+            @include trans;
+          }
+        }
+      }
+      .link {
+        margin-left: 2em;
+      }
+    }
+
+    .signin {
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        text-transform: uppercase;
+      }
+      font-size: 0.9rem;
+      display: inline-block;
+      color: whitesmoke;
+      font-weight: bolder;
+      cursor: pointer;
+      padding: 1em 13em 1em 2em;
+      margin-left: 2em;
+      border-radius: 5px;
+
+      @include trans;
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        @include trans;
+      }
+    }
+    .join {
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        text-transform: uppercase;
+      }
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      display: inline-block;
+      background: whitesmoke;
+
+      font-weight: bolder;
+      cursor: pointer;
+      padding: 1em 11em 1em 2em;
+      margin-left: 2em;
+      border-radius: 5px;
+
+      @include trans;
+      &:hover {
+        @include trans;
+      }
+    }
+  }
+
+  // navbar two ends
+
+  // media query
+}
