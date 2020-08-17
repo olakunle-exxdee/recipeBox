@@ -135,8 +135,8 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c75e07), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(to bottom, #c75e07, rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#c75e07), to(black));
+  background: linear-gradient(to bottom, #c75e07, black);
   min-height: 100vh;
   width: 100%;
   display: block;
